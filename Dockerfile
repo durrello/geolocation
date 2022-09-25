@@ -1,3 +1,4 @@
 FROM openjdk:8
-COPY webapp/target/webapp.war app.war
-ENTRYPOINT ["java","-jar","/app.war"]
+ADD target/bioMedical-0.0.1-SNAPSHOT.jar bioMedical-0.0.1-SNAPSHOT.jar
+EXPOSE 8081
+ENTRYPOINT ["-java","-jar","bioMedical-0.0.1-SNAPSHOT.jar"]
